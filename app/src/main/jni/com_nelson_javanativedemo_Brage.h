@@ -16,7 +16,7 @@ JNIEXPORT jint JNICALL Java_com_nelson_javanativedemo_Brage_doInNative
   (JNIEnv * evn, jobject obj);
 
 JNIEXPORT void JNICALL Java_com_nelson_javanativedemo_Brage_callbackJava
-        (JNIEnv * evn, jobject obj);
+        (JNIEnv *env, jclass type, jobject context);
 
 #ifdef __cplusplus
 }
