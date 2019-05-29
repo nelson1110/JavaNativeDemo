@@ -13,7 +13,10 @@ extern "C" {
  * Signature: ()I
  */
 JNIEXPORT jint JNICALL Java_com_nelson_javanativedemo_Brage_doInNative
-  (JNIEnv *, jobject);
+  (JNIEnv * evn, jobject obj);
+
+JNIEXPORT void JNICALL Java_com_nelson_javanativedemo_Brage_callbackJava
+        (JNIEnv *env, jclass type, jobject context);
 
 #ifdef __cplusplus
 }

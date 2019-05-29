@@ -15,7 +15,7 @@ android {
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         ndk {
             moduleName "NativeMethods"//指定生成的so文件名
-            abiFilters "armeabi", "armeabi-v7a", "x86"//cpu的类型
+            abiFilters "arm64-v8a", "armeabi-v7a", "x86"//cpu的类型
         }
     }
     buildTypes {
@@ -25,6 +25,12 @@ android {
         }
     }
     sourceSets { main { jni.srcDirs = ['src/main/jni', 'src/main/jni/'] } }
+
+    externalNativeBuild {
+        ndkBuild {
+            path file('src/main/jni/Android.mk')
+        }
+    }
 
 
 }
