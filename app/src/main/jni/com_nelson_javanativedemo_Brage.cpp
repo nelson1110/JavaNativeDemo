@@ -11,5 +11,5 @@ JNIEXPORT void JNICALL Java_com_nelson_javanativedemo_Brage_callbackJava(JNIEnv 
     jclass jclass1 = env -> FindClass("com/nelson/javanativedemo/Brage");
     jmethodID jmethodID1 = env ->GetMethodID(jclass1,"showToast", "(Landroid/content/Context;Ljava/lang/String;)V");
     jobject obj1 = env -> AllocObject(jclass1);
-    env -> CallObjectMethod(obj1,jmethodID1,context,env->NewStringUTF("来自native的文字"));
+    env -> CallVoidMethod(obj1,jmethodID1,context,env -> NewStringUTF("来自native的文字"));
 }
