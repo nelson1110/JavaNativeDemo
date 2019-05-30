@@ -15,12 +15,18 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         doNative1.setOnClickListener {
-            Toast.makeText(this@MainActivity,Brage.doInNative().toString(),Toast.LENGTH_SHORT).show()
+            Toast.makeText(this@MainActivity,Brage.doInNative(),Toast.LENGTH_SHORT).show()
+        }
+
+        doNative2.setOnClickListener {
+            Brage.doInNativeTrends(this@MainActivity)
         }
 
         doJava.setOnClickListener {
             Brage.callbackJava(this@MainActivity)
         }
+
+
 
     }
 }
